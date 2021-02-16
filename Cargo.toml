@@ -3,6 +3,8 @@ name = "constant_sandbox"
 version = "0.1.0"
 authors = ["Stephen Solka <solka@hey.com>"]
 edition = "2018"
+license = "MIT"
+description = "Tool for ruby codebases used to enforce boundaries and modularize Rails applications"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
