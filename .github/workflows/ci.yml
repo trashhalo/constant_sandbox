@@ -76,7 +76,7 @@ jobs:
         echo "target flag is: ${{ env.TARGET_FLAGS }}"
 
     - name: Build constant_sandbox and all crates
-      run: ${{ env.CARGO }} build --verbose --all ${{ env.TARGET_FLAGS }}
+      run: ${{ env.CARGO }} build --verbose --release --all ${{ env.TARGET_FLAGS }}
 
     - name: Run tests (with cross)
       # These tests should actually work, but they almost double the runtime.
@@ -87,5 +87,5 @@ jobs:
       run: ${{ env.CARGO }} test --verbose --all ${{ env.TARGET_FLAGS }}
     - uses: actions/upload-artifact@v2
       with:	
-        name: ${{ matrix.rust }}_${{ matrix.target }}
-        path: ${{ github.workspace }}/target/**/*
+        name: ${{ matrix.rust }}_${{ matrix.target }}_constant_sandbox
+        path: ${{ github.workspace }}/target/${{ matrix.target }}/release/constant_sandbox
