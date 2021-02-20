@@ -15,7 +15,12 @@ No dependencies are required for your ruby codebase. The [parser library used](h
 
 ## Installation
 
-At this time the only path to install this is using rust's cargo install. I plan on publishing precompiled versions and adding homebrew recipes soon.
+### Homebrew (linux/mac)
+```
+brew install trashhalo/homebrew-brews/constant_sandbox
+```
+### Releases (linux/mac/win)
+https://github.com/trashhalo/constant_sandbox/releases
 
 ## Usage
 
