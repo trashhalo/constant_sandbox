@@ -85,3 +85,7 @@ jobs:
       # regex engine and once with PCRE2.
       if: matrix.target != ''
       run: ${{ env.CARGO }} test --verbose --all ${{ env.TARGET_FLAGS }}
+    - uses: actions/upload-artifact@v2
+      with:	
+        name: ${{ matrix.rust }}_${{ matrix.target }}
+        path: ${{ github.workspace }}/target/**/*
